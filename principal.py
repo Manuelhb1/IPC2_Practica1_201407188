@@ -2,23 +2,27 @@ from colorama import Fore, Style, Back, init
 from listaDoble import ListaDoble
 import time
 from os import system
+import os
 
 
 class Principal:
 
-    def __init__(self, matriz = None):
+    def __init__(self, matriz = None, alto = None, ancho = None):
         self.matriz = matriz
+        self.ancho = ancho
+        self.alto = alto
 
     def limpiar(self):
         system("cls")   
 
     def crearTablero(self, filas, columnas):
-
+        self.alto = filas
+        self.ancho = columnas
         self.matriz = ListaDoble()
-        for x in range(filas):
+        for x in range(self.ancho):
             fila = ListaDoble()
             
-            for y in range(columnas):                                 
+            for y in range(self.alto):                                 
                 fila.agregarFinal("■")
             self.matriz.agregarFinal(fila)
         
@@ -90,8 +94,52 @@ class Principal:
         print(nombre)
 
     def graficar(self):
-        pass
 
+        graficod = """digraph grafo{\n
+        node[shape=circle];\n"""
+        
+        n =f'''n0 [label="Guatematel Colorealo"];\n''' 
+
+        #n=''
+        enlace = ''
+        num = 1
+
+        for y in range(self.alto+1):
+            for z in range(self.ancho+1):
+
+                if y == 0:
+                    n = n + f'''n{num} [label="{z}"];\n'''
+            
+                else:
+                    if z == 0:    
+                        n = n + f'''n{num} [label="{y}"];\n'''
+                    else:
+                        n = n + f'''n{num} [label=""];\n'''              
+                num+=1
+
+        for y in range(self.alto+1):
+            for z in range(self.ancho+1):
+
+                if y == 0:
+                    
+                    enlace = enlace + f'''n{y} -> n{z+1}\n''' 
+                   
+            
+                else:
+                    if z == 0:    
+                        n = n + f'''n{num} [label="{y}"];\n'''
+                    else:
+                        n = n + f'''n{num} [label=""];\n'''             
+                num+=1
+
+
+        
+        graf = graficod + n +  enlace+"\n}"
+        
+        
+        with open('grafica.dot', 'w') as f:
+            f.write(graf)
+        os.system('dot -Tpdf grafica.dot -o grafica.pdf')
 
 
 
@@ -168,6 +216,7 @@ while salir:
                 nuevoT.logo()
                 
             if atras.upper() == "N":
+                nuevoT.graficar()
                 regresar = False
                 
     elif int(opcion) == 2:

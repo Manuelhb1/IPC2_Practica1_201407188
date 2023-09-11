@@ -1,0 +1,48 @@
+digraph grafo{
+
+        node[shape=circle];
+n0 [label="Guatematel Colorealo"];
+n1 [label="0"];
+n2 [label="1"];
+n3 [label="2"];
+n4 [label="3"];
+n5 [label="4"];
+n6 [label="5"];
+n7 [label="1"];
+n8 [label=""];
+n9 [label=""];
+n10 [label=""];
+n11 [label=""];
+n12 [label=""];
+n13 [label="2"];
+n14 [label=""];
+n15 [label=""];
+n16 [label=""];
+n17 [label=""];
+n18 [label=""];
+n19 [label="3"];
+n20 [label=""];
+n21 [label=""];
+n22 [label=""];
+n23 [label=""];
+n24 [label=""];
+n25 [label="4"];
+n26 [label=""];
+n27 [label=""];
+n28 [label=""];
+n29 [label=""];
+n30 [label=""];
+n31 [label="5"];
+n32 [label=""];
+n33 [label=""];
+n34 [label=""];
+n35 [label=""];
+n36 [label=""];
+n0 -> n1
+n0 -> n2
+n0 -> n3
+n0 -> n4
+n0 -> n5
+n0 -> n6
+
+}
