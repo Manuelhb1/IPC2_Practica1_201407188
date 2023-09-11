@@ -114,23 +114,28 @@ class Principal:
                     if z == 0:    
                         n = n + f'''n{num} [label="{y}"];\n'''
                     else:
+
                         n = n + f'''n{num} [label=""];\n'''              
                 num+=1
 
-        for y in range(self.alto+1):
-            for z in range(self.ancho+1):
+        actual = 1
+        
+        for y in range(self.alto+2):
+            actual = y
+            siguiente = actual + (self.alto + 1)
 
-                if y == 0:
-                    
+            for z in range(self.ancho+1):
+                if z == self.alto and y != 0:
+                    break
+
+                if y == 0:                    
                     enlace = enlace + f'''n{y} -> n{z+1}\n''' 
-                   
-            
-                else:
-                    if z == 0:    
-                        n = n + f'''n{num} [label="{y}"];\n'''
-                    else:
-                        n = n + f'''n{num} [label=""];\n'''             
-                num+=1
+                               
+                else:                       
+                    enlace = enlace + f'''n{actual} -> n{siguiente}\n'''
+                              
+                actual = actual + (self.alto + 1)
+                siguiente = siguiente + (self.alto + 1)
 
 
         
@@ -223,6 +228,7 @@ while salir:
         nuevoT.logo()
         nuevoT.mostrarDatos()
     elif int(opcion) == 3:
+        print("Saliendo...\n")
         exit()
     else:
         print("Ingresa una opcion correcta")       
