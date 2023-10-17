@@ -40,27 +40,27 @@ class Principal:
 
         if color.upper() == "AZUL" or color.upper() == "A":
 
-            color = f"""{Fore.BLUE}A{Style.RESET_ALL}"""
+            color = "A"
             nuevoT.matriz.buscarPosicion(fila).modificarPosicion(columna,color)
 
         elif color.upper() == "ROJO" or color.upper() == "R":
 
-            color = f"""{Fore.RED}R{Style.RESET_ALL}"""
+            color = "R"
             nuevoT.matriz.buscarPosicion(fila).modificarPosicion(columna,color)
 
         elif color.upper() == "VERDE" or color.upper() == "V":
 
-            color = f"""{Fore.GREEN}V{Style.RESET_ALL}"""
+            color = "V"
             nuevoT.matriz.buscarPosicion(fila).modificarPosicion(columna,color)    
 
         elif color.upper() == "PURPURA" or color.upper() == "P":
 
-            color = f"""{Fore.MAGENTA}P{Style.RESET_ALL}"""
+            color = "P"
             nuevoT.matriz.buscarPosicion(fila).modificarPosicion(columna,color) 
 
         elif color.upper() == "NARANJA" or color.upper() == "N":
 
-            color = f"""{Fore.YELLOW}N{Style.RESET_ALL}"""
+            color = "N"
             nuevoT.matriz.buscarPosicion(fila).modificarPosicion(columna,color)
 
     def logo(self):
@@ -98,7 +98,7 @@ class Principal:
         graficod = """digraph grafo{\n
         node[shape=circle];\n"""
         
-        n =f'''n0 [label="Guatematel Colorealo"];\n''' 
+        n =f'''n0 [label="Guatematel\nColorealo"];\n''' 
 
         enlace = ''
         num = 1

@@ -1,7 +1,8 @@
 digraph grafo{
 
         node[shape=circle];
-n0 [label="Guatematel Colorealo"];
+n0 [label="Guatematel
+Colorealo"];
 n1 [label="0"];
 n2 [label="1"];
 n3 [label="2"];
@@ -9,120 +10,48 @@ n4 [label="3"];
 n5 [label="4"];
 n6 [label="5"];
 n7 [label="6"];
-n8 [label="7"];
-n9 [label="8"];
-n10 [label="9"];
-n11 [label="10"];
-n12 [label="1"];
+n8 [label="1"];
+n9 [label=""];
+n10 [label="" fillcolor="#0000ff" style=filled];
+n11 [label=""];
+n12 [label=""];
 n13 [label=""];
 n14 [label=""];
-n15 [label=""];
+n15 [label="2"];
 n16 [label=""];
 n17 [label=""];
 n18 [label=""];
 n19 [label=""];
 n20 [label=""];
 n21 [label=""];
-n22 [label=""];
-n23 [label="2"];
-n24 [label=""];
+n22 [label="3"];
+n23 [label=""];
+n24 [label="" fillcolor="#ff0000" style=filled];
 n25 [label=""];
 n26 [label=""];
-n27 [label=""];
+n27 [label="" fillcolor="#3EE300" style=filled];
 n28 [label=""];
-n29 [label=""];
+n29 [label="4"];
 n30 [label=""];
 n31 [label=""];
 n32 [label=""];
 n33 [label=""];
-n34 [label="3"];
+n34 [label=""];
 n35 [label=""];
-n36 [label=""];
+n36 [label="5"];
 n37 [label=""];
 n38 [label=""];
 n39 [label=""];
 n40 [label=""];
 n41 [label=""];
 n42 [label=""];
-n43 [label=""];
+n43 [label="6"];
 n44 [label=""];
-n45 [label="4"];
+n45 [label=""];
 n46 [label=""];
 n47 [label=""];
 n48 [label=""];
 n49 [label=""];
-n50 [label=""];
-n51 [label=""];
-n52 [label=""];
-n53 [label=""];
-n54 [label=""];
-n55 [label=""];
-n56 [label="5"];
-n57 [label=""];
-n58 [label=""];
-n59 [label=""];
-n60 [label=""];
-n61 [label=""];
-n62 [label=""];
-n63 [label=""];
-n64 [label=""];
-n65 [label=""];
-n66 [label=""];
-n67 [label="6"];
-n68 [label=""];
-n69 [label=""];
-n70 [label=""];
-n71 [label=""];
-n72 [label=""];
-n73 [label=""];
-n74 [label=""];
-n75 [label=""];
-n76 [label=""];
-n77 [label=""];
-n78 [label="7"];
-n79 [label=""];
-n80 [label=""];
-n81 [label=""];
-n82 [label=""];
-n83 [label=""];
-n84 [label=""];
-n85 [label=""];
-n86 [label=""];
-n87 [label=""];
-n88 [label=""];
-n89 [label="8"];
-n90 [label=""];
-n91 [label=""];
-n92 [label=""];
-n93 [label=""];
-n94 [label=""];
-n95 [label=""];
-n96 [label=""];
-n97 [label=""];
-n98 [label=""];
-n99 [label=""];
-n100 [label="9"];
-n101 [label=""];
-n102 [label=""];
-n103 [label=""];
-n104 [label=""];
-n105 [label=""];
-n106 [label=""];
-n107 [label=""];
-n108 [label=""];
-n109 [label=""];
-n110 [label=""];
-n111 [label="10"];
-n112 [label=""];
-n113 [label=""];
-n114 [label=""];
-n115 [label=""];
-n116 [label=""];
-n117 [label=""];
-n118 [label=""];
-n119 [label=""];
-n120 [label=""];
-n121 [label=""];
 n0 -> n1
 n0 -> n2
 n0 -> n3
@@ -130,119 +59,47 @@ n0 -> n4
 n0 -> n5
 n0 -> n6
 n0 -> n7
-n0 -> n8
-n0 -> n9
-n0 -> n10
-n0 -> n11
-n1 -> n12
-n12 -> n23
-n23 -> n34
-n34 -> n45
-n45 -> n56
-n56 -> n67
-n67 -> n78
-n78 -> n89
-n89 -> n100
-n100 -> n111
-n2 -> n13
-n13 -> n24
-n24 -> n35
-n35 -> n46
-n46 -> n57
-n57 -> n68
-n68 -> n79
-n79 -> n90
-n90 -> n101
-n101 -> n112
-n3 -> n14
-n14 -> n25
-n25 -> n36
-n36 -> n47
-n47 -> n58
-n58 -> n69
-n69 -> n80
-n80 -> n91
-n91 -> n102
-n102 -> n113
-n4 -> n15
-n15 -> n26
-n26 -> n37
-n37 -> n48
-n48 -> n59
-n59 -> n70
-n70 -> n81
-n81 -> n92
-n92 -> n103
-n103 -> n114
-n5 -> n16
-n16 -> n27
-n27 -> n38
-n38 -> n49
-n49 -> n60
-n60 -> n71
-n71 -> n82
-n82 -> n93
-n93 -> n104
-n104 -> n115
-n6 -> n17
-n17 -> n28
-n28 -> n39
-n39 -> n50
-n50 -> n61
-n61 -> n72
-n72 -> n83
-n83 -> n94
-n94 -> n105
-n105 -> n116
-n7 -> n18
-n18 -> n29
-n29 -> n40
-n40 -> n51
-n51 -> n62
-n62 -> n73
-n73 -> n84
-n84 -> n95
-n95 -> n106
-n106 -> n117
-n8 -> n19
-n19 -> n30
-n30 -> n41
-n41 -> n52
-n52 -> n63
-n63 -> n74
-n74 -> n85
-n85 -> n96
-n96 -> n107
-n107 -> n118
-n9 -> n20
-n20 -> n31
-n31 -> n42
-n42 -> n53
-n53 -> n64
-n64 -> n75
-n75 -> n86
-n86 -> n97
-n97 -> n108
-n108 -> n119
-n10 -> n21
-n21 -> n32
-n32 -> n43
-n43 -> n54
-n54 -> n65
-n65 -> n76
-n76 -> n87
-n87 -> n98
-n98 -> n109
-n109 -> n120
-n11 -> n22
-n22 -> n33
-n33 -> n44
-n44 -> n55
-n55 -> n66
-n66 -> n77
-n77 -> n88
-n88 -> n99
-n99 -> n110
-n110 -> n121
+n1 -> n8
+n8 -> n15
+n15 -> n22
+n22 -> n29
+n29 -> n36
+n36 -> n43
+n2 -> n9
+n9 -> n16
+n16 -> n23
+n23 -> n30
+n30 -> n37
+n37 -> n44
+n3 -> n10
+n10 -> n17
+n17 -> n24
+n24 -> n31
+n31 -> n38
+n38 -> n45
+n4 -> n11
+n11 -> n18
+n18 -> n25
+n25 -> n32
+n32 -> n39
+n39 -> n46
+n5 -> n12
+n12 -> n19
+n19 -> n26
+n26 -> n33
+n33 -> n40
+n40 -> n47
+n6 -> n13
+n13 -> n20
+n20 -> n27
+n27 -> n34
+n34 -> n41
+n41 -> n48
+n7 -> n14
+n14 -> n21
+n21 -> n28
+n28 -> n35
+n35 -> n42
+n42 -> n49
 
 }
