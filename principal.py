@@ -100,7 +100,6 @@ class Principal:
         
         n =f'''n0 [label="Guatematel Colorealo"];\n''' 
 
-        #n=''
         enlace = ''
         num = 1
 
@@ -114,8 +113,18 @@ class Principal:
                     if z == 0:    
                         n = n + f'''n{num} [label="{y}"];\n'''
                     else:
-
-                        n = n + f'''n{num} [label=""];\n'''              
+                        if self.matriz.buscarPosicion(y-1).buscarPosicion(z-1)=="A":
+                            n = n + f'''n{num} [label="" fillcolor="#0000ff" style=filled];\n'''              
+                        elif self.matriz.buscarPosicion(y-1).buscarPosicion(z-1)=="R":
+                            n = n + f'''n{num} [label="" fillcolor="#ff0000" style=filled];\n'''
+                        elif self.matriz.buscarPosicion(y-1).buscarPosicion(z-1)=="V":
+                            n = n + f'''n{num} [label="" fillcolor="#3EE300" style=filled];\n'''
+                        elif self.matriz.buscarPosicion(y-1).buscarPosicion(z-1)=="P":
+                            n = n + f'''n{num} [label="" fillcolor="#630b57" style=filled];\n'''
+                        elif self.matriz.buscarPosicion(y-1).buscarPosicion(z-1)=="N":
+                            n = n + f'''n{num} [label="" fillcolor="#ff8000" style=filled];\n'''    
+                        else:
+                            n = n + f'''n{num} [label=""];\n'''
                 num+=1
 
         actual = 1
