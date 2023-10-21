@@ -7,6 +7,8 @@ import os
 
 class Principal:
 
+    print("hola")
+
     def __init__(self, matriz = None, alto = None, ancho = None):
         self.matriz = matriz
         self.ancho = ancho
