@@ -103,6 +103,8 @@ class Principal:
         enlace = ''
         num = 1
 
+
+        #Creando los nodos ----------------
         for y in range(self.alto+1):
             for z in range(self.ancho+1):
 
@@ -129,22 +131,49 @@ class Principal:
 
         actual = 1
         
-        for y in range(self.alto+2):
+        #Creando los enlaces ------------Matriz cuadrada MxM
+
+        if self.alto == self.ancho:
+            pass
+        elif self.ancho > self.alto:
+            pass
+        else:
+            pass
+
+
+
+
+
+
+        for y in range(self.alto+2): 
             actual = y
             siguiente = actual + (self.alto + 1)
 
             for z in range(self.ancho+1):
-                if z == self.alto and y != 0:
-                    break
 
+                #------Evita que los enlaces se salgan de rango y si y != 0 no se enlaza de la misma manera  
+                if z == self.alto and y != 0:
+                    break  
+
+                #En y = 0 tiene que enlazar el nodo0 con la primera fila
                 if y == 0:                    
-                    enlace = enlace + f'''n{y} -> n{z+1}\n''' 
-                               
-                else:                       
+                    enlace = enlace + f'''n{y} -> n{z+1}\n'''                  
+                                                      
+                else: 
+
                     enlace = enlace + f'''n{actual} -> n{siguiente}\n'''
                               
                 actual = actual + (self.alto + 1)
                 siguiente = siguiente + (self.alto + 1)
+
+
+        """for y in range(self.alto+2):
+            actual = y
+            siguiente = actual"""
+
+
+
+
 
 
         
