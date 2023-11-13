@@ -19,10 +19,10 @@ class Principal:
         self.alto = filas
         self.ancho = columnas
         self.matriz = ListaDoble()
-        for x in range(self.ancho):
+        for x in range(self.alto):
             fila = ListaDoble()
             
-            for y in range(self.alto):                                 
+            for y in range(self.ancho):                                 
                 fila.agregarFinal("■")
             self.matriz.agregarFinal(fila)
         
@@ -128,34 +128,19 @@ class Principal:
                         else:
                             n = n + f'''n{num} [label=""];\n'''
                 num+=1
+       
 
         actual = 1
-        
-        #Creando los enlaces ------------Matriz cuadrada MxM
-
-        if self.alto == self.ancho:
-            pass
-        elif self.ancho > self.alto:
-            pass
-        else:
-            pass
-
-
-
-
-
+        siguiente = actual + self.ancho+1        
 
         for y in range(self.alto+2): 
-            actual = y
-            siguiente = actual + (self.alto + 1)
+
+            #------Evita que los enlaces se salgan de rango y si y != 0 no se enlaza de la misma manera  
+            if y == self.alto+1 and y != 0:
+                break  
 
             for z in range(self.ancho+1):
-
-                #------Evita que los enlaces se salgan de rango y si y != 0 no se enlaza de la misma manera  
-                if z == self.alto and y != 0:
-                    break  
-
-                #En y = 0 tiene que enlazar el nodo0 con la primera fila
+               
                 if y == 0:                    
                     enlace = enlace + f'''n{y} -> n{z+1}\n'''                  
                                                       
@@ -163,28 +148,15 @@ class Principal:
 
                     enlace = enlace + f'''n{actual} -> n{siguiente}\n'''
                               
-                actual = actual + (self.alto + 1)
-                siguiente = siguiente + (self.alto + 1)
-
-
-        """for y in range(self.alto+2):
-            actual = y
-            siguiente = actual"""
-
-
-
-
-
+                    actual +=1
+                    siguiente =  actual + self.ancho+1            
 
         
-        graf = graficod + n +  enlace+"\n}"
-        
+        graf = graficod + n +  enlace+"\n}"        
         
         with open('grafica.dot', 'w') as f:
             f.write(graf)
         os.system('dot -Tpdf grafica.dot -o grafica.pdf')
-
-
 
 
 menu = f'''\n\n+-----------------------------------------+
@@ -232,8 +204,8 @@ while salir:
         color = input("   ")
         
         
-        fM = f"""Ingresa una fila donde colocar una pieza: Rango 1-{alto}\n"""
-        cM = f"""Ingresa una columna donde colocar una pieza: Rango 1-{ancho}\n"""
+        fM = f"""Ingresa una fila donde colocar una pieza: Rango 1-{nuevoT.alto}\n"""
+        cM = f"""Ingresa una columna donde colocar una pieza: Rango 1-{nuevoT.ancho}\n"""
         
         nuevoT.logo()
         f = input(fM)

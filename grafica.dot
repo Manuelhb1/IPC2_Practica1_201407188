@@ -8,32 +8,48 @@ n2 [label="1"];
 n3 [label="2"];
 n4 [label="3"];
 n5 [label="1"];
-n6 [label="" fillcolor="#0000ff" style=filled];
+n6 [label=""];
 n7 [label=""];
 n8 [label=""];
 n9 [label="2"];
 n10 [label=""];
-n11 [label=""];
+n11 [label="" fillcolor="#630b57" style=filled];
 n12 [label=""];
 n13 [label="3"];
 n14 [label=""];
 n15 [label=""];
 n16 [label=""];
+n17 [label="4"];
+n18 [label=""];
+n19 [label=""];
+n20 [label=""];
+n21 [label="5"];
+n22 [label=""];
+n23 [label=""];
+n24 [label=""];
 n0 -> n1
 n0 -> n2
 n0 -> n3
 n0 -> n4
 n1 -> n5
-n5 -> n9
-n9 -> n13
 n2 -> n6
-n6 -> n10
-n10 -> n14
 n3 -> n7
-n7 -> n11
-n11 -> n15
 n4 -> n8
+n5 -> n9
+n6 -> n10
+n7 -> n11
 n8 -> n12
+n9 -> n13
+n10 -> n14
+n11 -> n15
 n12 -> n16
+n13 -> n17
+n14 -> n18
+n15 -> n19
+n16 -> n20
+n17 -> n21
+n18 -> n22
+n19 -> n23
+n20 -> n24
 
 }
